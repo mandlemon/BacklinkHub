@@ -1,1 +1,1042 @@
-sdfd
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>분당·야탑·정자동·판교 지역별 이용 정보 모음</title>
+
+  <meta name="description" content="분당, 야탑, 정자동, 판교 지역의 룸싸롱, 셔츠룸, 하이퍼블릭, 하퍼 관련 페이지를 지역별로 정리한 정보형 디렉터리입니다.">
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+    :root {
+      --background: #08090c;
+      --surface: #111318;
+      --surface-light: #171a21;
+      --surface-hover: #1c2029;
+
+      --text: #f5f5f4;
+      --muted: #969ba7;
+      --line: rgba(255, 255, 255, 0.09);
+
+      --gold: #d9b96e;
+      --gold-light: #f0d99f;
+
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(217, 185, 110, 0.11),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 100% 45%,
+          rgba(85, 103, 166, 0.09),
+          transparent 34%
+        ),
+        var(--background);
+
+      color: var(--text);
+
+      font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        Arial,
+        sans-serif;
+
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* -------------------- */
+    /* 상단 내비게이션 */
+    /* -------------------- */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom: 1px solid var(--line);
+
+      background: rgba(8, 9, 12, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .navigation {
+      min-height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(217, 185, 110, 0.4);
+      border-radius: 50%;
+
+      color: var(--gold-light);
+      background: rgba(217, 185, 110, 0.08);
+
+      font-family: Georgia, serif;
+      font-size: 15px;
+    }
+
+    .navigation-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .navigation-links a {
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .navigation-links a:hover {
+      color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* -------------------- */
+    /* 히어로 */
+    /* -------------------- */
+
+    .hero {
+      padding: 110px 0 75px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 60px;
+      align-items: end;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 22px;
+
+      color: var(--gold-light);
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero-label::before {
+      content: "";
+
+      width: 34px;
+      height: 1px;
+
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 0;
+
+      font-size: clamp(42px, 7vw, 82px);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      line-height: 1.07;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 28px 0 0;
+
+      color: #b9bdc7;
+
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .hero-side {
+      padding: 26px;
+
+      border: 1px solid var(--line);
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(255, 255, 255, 0.012)
+        );
+
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-side-label {
+      margin: 0 0 8px;
+
+      color: var(--gold);
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-side strong {
+      display: block;
+
+      font-size: 28px;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-side p {
+      margin: 15px 0 0;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* -------------------- */
+    /* 안내 섹션 */
+    /* -------------------- */
+
+    .intro-section {
+      padding: 30px 0 80px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .intro-card {
+      min-height: 190px;
+      padding: 24px;
+
+      border-top: 1px solid rgba(217, 185, 110, 0.42);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      border-radius: 14px;
+
+      background: rgba(17, 19, 24, 0.74);
+    }
+
+    .intro-number {
+      color: rgba(217, 185, 110, 0.55);
+
+      font-family: Georgia, serif;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+    }
+
+    .intro-card h2 {
+      margin: 22px 0 10px;
+
+      font-size: 19px;
+      letter-spacing: -0.025em;
+    }
+
+    .intro-card p {
+      margin: 0;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* -------------------- */
+    /* 지역 링크 */
+    /* -------------------- */
+
+    .directory-section {
+      padding: 40px 0 95px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    .section-eyebrow {
+      display: block;
+      margin-bottom: 12px;
+
+      color: var(--gold);
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+
+      font-size: clamp(30px, 5vw, 48px);
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      margin: 18px 0 0;
+
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .region-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .region {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 30px;
+
+      padding: 28px;
+
+      border: 1px solid var(--line);
+      border-radius: 18px;
+
+      background: rgba(17, 19, 24, 0.7);
+
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .region:hover {
+      border-color: rgba(217, 185, 110, 0.3);
+      background: rgba(20, 23, 29, 0.92);
+    }
+
+    .region-heading {
+      padding-right: 26px;
+      border-right: 1px solid var(--line);
+    }
+
+    .region-heading span {
+      color: var(--gold);
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+
+    .region-heading h3 {
+      margin: 7px 0 8px;
+
+      font-size: 27px;
+      letter-spacing: -0.04em;
+    }
+
+    .region-heading p {
+      margin: 0;
+
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .region-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .region-link {
+      min-height: 76px;
+      padding: 15px 17px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+
+      border: 1px solid var(--line);
+      border-radius: 12px;
+
+      background: var(--surface-light);
+
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease;
+    }
+
+    .region-link:hover {
+      transform: translateY(-3px);
+
+      border-color: rgba(217, 185, 110, 0.5);
+      background: var(--surface-hover);
+    }
+
+    .link-title {
+      display: block;
+
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    .link-description {
+      display: block;
+      margin-top: 3px;
+
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .link-arrow {
+      flex: 0 0 auto;
+
+      color: var(--gold);
+      font-size: 19px;
+
+      transition: transform 0.22s ease;
+    }
+
+    .region-link:hover .link-arrow {
+      transform: translateX(4px);
+    }
+
+    /* -------------------- */
+    /* 이용 전 체크 */
+    /* -------------------- */
+
+    .guide-section {
+      padding: 0 0 100px;
+    }
+
+    .guide-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+      gap: 50px;
+
+      padding: 42px;
+
+      border: 1px solid rgba(217, 185, 110, 0.23);
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 185, 110, 0.08),
+          rgba(255, 255, 255, 0.015)
+        ),
+        var(--surface);
+    }
+
+    .guide-box h2 {
+      margin: 0 0 15px;
+
+      font-size: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    .guide-box p {
+      margin: 0;
+
+      color: #b3b7c1;
+      font-size: 15px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+
+      color: #d6d8de;
+
+      font-size: 14px;
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+
+      flex: 0 0 22px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(217, 185, 110, 0.4);
+      border-radius: 50%;
+
+      color: var(--gold-light);
+      font-size: 11px;
+    }
+
+    /* -------------------- */
+    /* 푸터 */
+    /* -------------------- */
+
+    footer {
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      min-height: 100px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-link {
+      color: var(--gold-light);
+    }
+
+    /* -------------------- */
+    /* 반응형 */
+    /* -------------------- */
+
+    @media (max-width: 900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-side {
+        max-width: 520px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .region {
+        grid-template-columns: 1fr;
+      }
+
+      .region-heading {
+        padding: 0 0 22px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .guide-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .navigation {
+        min-height: 62px;
+      }
+
+      .navigation-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 0 50px;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 13vw, 57px);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .region {
+        padding: 20px;
+      }
+
+      .region-links {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-box {
+        padding: 28px 22px;
+      }
+
+      .footer-inner {
+        padding: 25px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container navigation">
+
+      <a class="brand" href="#top" aria-label="지역 안내 페이지 처음으로 이동">
+        <span class="brand-mark">B</span>
+        <span>Bundang Directory</span>
+      </a>
+
+      <nav class="navigation-links" aria-label="페이지 내 주요 메뉴">
+        <a href="#overview">이용 정보</a>
+        <a href="#directory">지역별 안내</a>
+        <a href="#check">확인 사항</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-layout">
+
+        <div>
+          <span class="hero-label">
+            Local Information Archive
+          </span>
+
+          <h1>
+            분당 생활권의<br>
+            <span>지역별 안내 페이지</span>
+          </h1>
+
+          <p class="hero-description">
+            분당을 중심으로 야탑, 정자동, 판교에서 자주 검색되는
+            룸싸롱, 셔츠룸, 하이퍼블릭, 하퍼 관련 안내 페이지를
+            한곳에서 찾을 수 있도록 지역과 업종 기준으로 정리했습니다.
+          </p>
+        </div>
+
+        <aside class="hero-side">
+          <p class="hero-side-label">
+            DIRECTORY SUMMARY
+          </p>
+
+          <strong>
+            4개 지역<br>
+            16개 안내 페이지
+          </strong>
+
+          <p>
+            지역별 페이지에서 이용 정보와 예약 관련 내용을
+            각각 확인할 수 있습니다.
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="intro-section" id="overview">
+      <div class="container intro-grid">
+
+        <article class="intro-card">
+          <span class="intro-number">01</span>
+
+          <h2>지역부터 선택하기</h2>
+
+          <p>
+            현재 위치와 이동하기 편한 지역을 먼저 선택하면
+            필요한 정보를 빠르게 좁힐 수 있습니다.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <span class="intro-number">02</span>
+
+          <h2>업종별 안내 비교</h2>
+
+          <p>
+            룸싸롱, 셔츠룸, 하이퍼블릭, 하퍼로 구분된
+            각각의 페이지를 비교해 볼 수 있습니다.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <span class="intro-number">03</span>
+
+          <h2>방문 전 정보 확인</h2>
+
+          <p>
+            가격과 이용 방식은 변동될 수 있으므로
+            실제 방문 전에는 해당 페이지의 안내 내용을 확인하는 것이 좋습니다.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="directory-section" id="directory">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">
+            Regional Directory
+          </span>
+
+          <h2>
+            지역별 바로가기
+          </h2>
+
+          <p>
+            방문을 고려하는 지역을 선택한 후,
+            원하는 업종의 상세 안내 페이지로 이동할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="region-list">
+
+          <!-- 분당 -->
+          <section class="region">
+
+            <div class="region-heading">
+              <span>REGION 01</span>
+              <h3>분당</h3>
+
+              <p>
+                분당 지역 전체를 기준으로 정리된 안내 페이지입니다.
+              </p>
+            </div>
+
+            <div class="region-links">
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">분당 룸싸롱</strong>
+                  <small class="link-description">메인 이용 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/분당셔츠룸/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">분당 셔츠룸</strong>
+                  <small class="link-description">셔츠룸 관련 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/분당하이퍼블릭/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">분당 하이퍼블릭</strong>
+                  <small class="link-description">하이퍼블릭 이용 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/분당하퍼/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">분당 하퍼</strong>
+                  <small class="link-description">하퍼 관련 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+            </div>
+          </section>
+
+          <!-- 야탑 -->
+          <section class="region">
+
+            <div class="region-heading">
+              <span>REGION 02</span>
+              <h3>야탑</h3>
+
+              <p>
+                야탑역 주변을 중심으로 확인할 수 있는 지역별 정보입니다.
+              </p>
+            </div>
+
+            <div class="region-links">
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/야탑룸싸롱/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">야탑 룸싸롱</strong>
+                  <small class="link-description">야탑 지역 룸 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/야탑셔츠룸/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">야탑 셔츠룸</strong>
+                  <small class="link-description">야탑 셔츠룸 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/야탑하이퍼블릭/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">야탑 하이퍼블릭</strong>
+                  <small class="link-description">하이퍼블릭 관련 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/야탑하퍼/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">야탑 하퍼</strong>
+                  <small class="link-description">야탑 하퍼 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+            </div>
+          </section>
+
+          <!-- 정자동 -->
+          <section class="region">
+
+            <div class="region-heading">
+              <span>REGION 03</span>
+              <h3>정자동</h3>
+
+              <p>
+                정자동 생활권에서 관련 정보를 찾을 때 참고할 수 있습니다.
+              </p>
+            </div>
+
+            <div class="region-links">
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/정자동룸싸롱/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">정자동 룸싸롱</strong>
+                  <small class="link-description">정자동 이용 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/정자동셔츠룸/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">정자동 셔츠룸</strong>
+                  <small class="link-description">셔츠룸 관련 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/정자동하이퍼블릭/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">정자동 하이퍼블릭</strong>
+                  <small class="link-description">하이퍼블릭 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/정자동하퍼/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">정자동 하퍼</strong>
+                  <small class="link-description">정자동 하퍼 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+            </div>
+          </section>
+
+          <!-- 판교 -->
+          <section class="region">
+
+            <div class="region-heading">
+              <span>REGION 04</span>
+              <h3>판교</h3>
+
+              <p>
+                판교 업무지구와 인근 지역에서 확인하기 좋은 정보입니다.
+              </p>
+            </div>
+
+            <div class="region-links">
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/판교룸싸롱/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">판교 룸싸롱</strong>
+                  <small class="link-description">판교 룸 이용 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/판교셔츠룸/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">판교 셔츠룸</strong>
+                  <small class="link-description">판교 셔츠룸 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/판교하이퍼블릭/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">판교 하이퍼블릭</strong>
+                  <small class="link-description">하이퍼블릭 안내</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a class="region-link" href="https://www.분당룸싸롱.site/판교하퍼/" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <strong class="link-title">판교 하퍼</strong>
+                  <small class="link-description">판교 하퍼 관련 정보</small>
+                </span>
+
+                <span class="link-arrow">→</span>
+              </a>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="check">
+      <div class="container">
+
+        <div class="guide-box">
+
+          <div>
+            <span class="section-eyebrow">
+              Before Visiting
+            </span>
+
+            <h2>
+              방문 전 확인하면 좋은 내용
+            </h2>
+
+            <p>
+              같은 지역이라도 이용 가능 시간이나 가격,
+              예약 가능 여부가 달라질 수 있습니다.
+              원하는 페이지에서 현재 안내 내용을 확인한 뒤
+              문의하는 것이 보다 효율적입니다.
+            </p>
+          </div>
+
+          <div class="check-list">
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+
+              <span>
+                이용하려는 지역과 이동 시간을 먼저 확인하세요.
+              </span>
+            </div>
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+
+              <span>
+                방문 인원과 희망 시간을 미리 정리하는 것이 좋습니다.
+              </span>
+            </div>
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+
+              <span>
+                가격과 제공 조건은 예약 전에 다시 확인하세요.
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Bundang Regional Directory
+      </span>
+
+      <a class="footer-link" href="https://www.분당룸싸롱.site/" target="_blank" rel="noopener noreferrer">
+        메인 안내 페이지 방문 →
+      </a>
+
+    </div>
+  </footer>
+
+
+</body></html>
